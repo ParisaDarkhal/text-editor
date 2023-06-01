@@ -26,10 +26,21 @@ module.exports = () => {
       }),
       new workboxPlugin.GenerateSW(),
       new MiniCssExtractPlugin(),
+      new InjectManifest({
+        swSrc: "./src/sw.js",
+        swDest: "service-worker.js",
+      }),
+      // I may need to add src to the line below
+      new WebpackPwaManifest({}),
     ],
 
     module: {
-      rules: [],
+      rules: [
+        {
+          test: /\.css$i/,
+          use: ["style-loader", "css-loader"],
+        },
+      ],
     },
   };
 };
