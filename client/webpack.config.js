@@ -30,8 +30,25 @@ module.exports = () => {
         swSrc: "./src/sw.js",
         swDest: "service-worker.js",
       }),
-      // I may need to add src to the line below
-      new WebpackPwaManifest({}),
+      // creates a manifest.json file
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: "Just another text editor",
+        short_name: "J.A.T.E",
+        description: "offline text editor",
+        background_color: "#235db5",
+        theme_color: "#236db6",
+        start_url: "/",
+        publicPath: "/",
+        icons: [
+          {
+            src: path.resolve("src/images/logo.png"),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join("assets", "icons"),
+          },
+        ],
+      }),
     ],
 
     module: {
