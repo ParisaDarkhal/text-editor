@@ -44,10 +44,10 @@ To use the app, follow these steps:
 
 ## Screenshots
 
-![Screenshot 1](./images/screenshot1.png)
-![Screenshot 2](./images/screenshot2.png)
-![Screenshot 3](./images/screenshot3.png)
-![Screenshot 4](./images/screenshot4.png)
+![Demo](./Assets/00-demo.gif)
+![Manifest](./Assets/01-manifest.png)
+![Service Worker](./Assets/02-service-worker.png)
+![idb storage](./Assets/03-idb-storage.png)
 
 ## Deployment
 
