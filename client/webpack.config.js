@@ -25,9 +25,9 @@ module.exports = () => {
         title: "Webpack Plugin",
       }),
       new workboxPlugin.GenerateSW(),
-      new MiniCssExtractPlugin(),
+      // new MiniCssExtractPlugin(),
       new InjectManifest({
-        swSrc: "./src/sw.js",
+        swSrc: "./src-sw.js",
         swDest: "src-sw.js", // I am not sure about this one. if doesn't work change it to servis-worker.js
       }),
       // creates a manifest.json file
