@@ -4,9 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently\"cd client && npm run build\" \"cd server && npm run server\"",
+    "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\"",
     "start": "npm run build && cd server && node server.js",
-    "server": "cd server server.js --ignore client",
+    "server": "cd server node server.js --ignore client",
     "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
     "client": "cd client && npm start"
@@ -21,6 +21,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+    "@babel/plugin-transform-runtime": "^7.22.4",
     "@babel/preset-env": "^7.16.4",
     "babel-loader": "^8.2.3",
     "concurrently": "^5.2.0",
