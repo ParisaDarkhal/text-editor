@@ -51,7 +51,7 @@ To use the app, follow these steps:
 
 ## Deployment
 
-The app is deployed on Heroku. You can access it here: https://text-editor-pwa.herokuapp.com/
+The app is deployed on Heroku. You can access it here: [Text Editor](https://text-editor-pdg.herokuapp.com/)
 
 ## License
 
